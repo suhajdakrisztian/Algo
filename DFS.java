@@ -47,32 +47,58 @@ class DFS {
   public static void getResults() {
       for(Node elem: results) {
         if(elem.parent != null)
-          System.out.println("Node: "+ elem.val + " Discovery: " + elem.discovery_time + " Finish:" + elem.finish_time + " Parent: " + elem.parent.val);
+          System.out.println("Node: "+ elem.val + 
+                            " Discovery: " + elem.discovery_time + 
+                            " Finish:" + elem.finish_time + 
+                            " Parent: " + elem.parent.val);
         else
-          System.out.println("Node: "+ elem.val + " Discovery: " + elem.discovery_time + " Finish:" + elem.finish_time + " Parent: " + 0);
+          System.out.println("Node: " + elem.val + 
+                            " Discovery: " + elem.discovery_time + 
+                            " Finish:" + elem.finish_time + 
+                            " Parent: " + 0);
       }
   }
 
   public static void main(String[] args) {
+/*
+    Node A = new Node("a");
+    Node B = new Node("b");
+    Node C = new Node("c");
+    Node D = new Node("d");
+    Node E = new Node("e");
+    Node F = new Node("f");
+    Node G = new Node("g");
 
-    Node egy = new Node(1);
-    Node ketto = new Node(2);
-    Node harom = new Node(3);
-    Node negy = new Node(4);
-    Node ot = new Node(5);
-    Node hat = new Node(6);
+    A.addNeighbour();
+    B.addNeighbour();
+    C.addNeighbour();
+    D.addNeighbour();
+    E.addNeighbour();
+    F.addNeighbour();
+    G.addNeighbour();
+*/
+/*
+    Node ONE = new Node(1);
+    Node TWO = new Node(2);
+    Node THREE = new Node(3);
+    Node FOUR = new Node(4);
+    Node FIVE = new Node(5);
+    Node SIX = new Node(6);
+    Node SEVEN = new Node(7);
 
-    egy.addNeighbour(ketto, harom);
-    ketto.addNeighbour(negy, ot);
-    negy.addNeighbour(hat);
-    harom.addNeighbour(ot);
-    ot.addNeighbour(hat);
-    
-
-    DepthFirstSearch(egy);
-    TopologicalSort.TS(egy);
-
+    ONE.addNeighbour();
+    TWO.addNeighbour();
+    THREE.addNeighbour();
+    FOUR.addNeighbour();
+    FIVE.addNeighbour();
+    SIX.addNeighbour();
+    SEVEN.addNeighbour();
+*/
+    DepthFirstSearch(null);
     getResults();
+    TopologicalSort.TS(null);
+
+    
 
   }
 }
